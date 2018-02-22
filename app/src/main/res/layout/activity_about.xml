@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="dcube.com.salonseek.AboutActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F2F2F2"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:text="Salon Rating"
+            android:textColor="#7A7A7A"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="0.0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/overalltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_text"
+            android:layout_centerHorizontal="true"
+            android:text="Overall"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:typeface="monospace" />
+
+        <utils.CustomRatingBarBlue
+            android:id="@+id/ratingbarblue"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/overalltext"
+            android:layout_centerInParent="true"
+            android:numStars="5"
+            app:stars="5" />
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_below="@id/ratingbarblue"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/linearChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ratingtext"
+                android:layout_centerInParent="true"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ratingtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F2F2F2"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:text="Photos"
+            android:textColor="#7A7A7A"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!--<Gallery-->
+        <!--android:id="@+id/Gallery01"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="130dp" />-->
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/pager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="130dp">-->
+    <!--</android.support.v4.view.ViewPager>-->
+
+    <utils.HorizontalListView
+        android:id="@+id/lv_salon_images"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F2F2F2"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:text="About Salon"
+            android:textColor="#7A7A7A"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@android:color/white"
+        android:elevation="1dp"
+        android:padding="20dp"
+        android:text="Zanajani Salon was founded by Ali Zanjani in May 2008" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "dcube.com.salonseek"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable-xhdpi'] } }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    //   compile 'com.stripe:stripe-android:+'
+
+
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.google.android.gms:play-services-location:9.2.0'
+    compile 'com.google.android.gms:play-services-maps:9.2.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.kyleduo.switchbutton:library:1.4.1'
+    compile 'org.lucasr.twowayview:twowayview:0.1.4'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.google.android.gms:play-services-places:9.2.0'
+    compile 'com.paypal.sdk:paypal-android-sdk:2.15.0'
+    compile 'com.stripe:stripe-android:2.0.2'
+    compile 'com.twilio:client-android:1.2.18'
+    compile 'net.gotev:uploadservice:2.1'
+    compile 'com.mixpanel.android:mixpanel-android:4.+'
+    compile 'com.google.firebase:firebase-messaging:9.2.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'

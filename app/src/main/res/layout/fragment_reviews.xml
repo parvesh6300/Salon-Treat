@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EDEDED">
+
+  <RelativeLayout
+      android:id="@+id/rel_cut"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#EDEDED">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Get started!"
+        android:textColor="#C8C8C8"
+        android:id="@+id/getstarted"
+        android:typeface="monospace"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/scissors"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@id/getstarted"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You currently have no reviews."
+        android:textColor="#C8C8C8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/getstarted"
+        android:typeface="monospace"/>
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:background="@drawable/myrect"
+        android:textColor="@color/white"
+        android:text="Book a Treatment"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_below="@id/getstarted"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:typeface="monospace"
+        android:id="@+id/book" />
+
+
+  </RelativeLayout>
+
+
+  <ListView
+      android:id="@+id/list_review"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:divider="@null"
+      android:layout_marginBottom="50dp"/>
+
+
+
+</LinearLayout>

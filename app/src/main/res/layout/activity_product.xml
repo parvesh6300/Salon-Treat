@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rel_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/backhdpi" />
+
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/app_icon"
+            android:layout_toEndOf="@+id/iv_back"/>
+
+
+
+        <ImageView
+            android:id="@+id/iv_wishlist"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/wishlist_hdpi"
+            android:layout_marginEnd="20dp"
+            android:layout_alignTop="@+id/iv_cart"
+            android:layout_alignParentEnd="true" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@mipmap/cart_hdpi"
+            android:layout_toStartOf="@+id/iv_wishlist"/>
+
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@mipmap/search_hdpi"
+            android:layout_toStartOf="@+id/iv_cart"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/rel_header"
+        android:layout_above="@+id/lin_footer"/>
+
+    <LinearLayout
+        android:id="@+id/lin_footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@drawable/shadow_bg"
+        android:gravity="center"
+        android:elevation="4dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_item_selected"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="0 Item(s)\nSelected"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:typeface="monospace"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_check_out"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="CHECKOUT"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_corner_green_bg"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:typeface="monospace"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

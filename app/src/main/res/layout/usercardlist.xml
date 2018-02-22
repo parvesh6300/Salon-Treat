@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_gravity="center"
+        android:background="#F2F2F2">
+
+
+        <RelativeLayout
+            android:id="@+id/cardlayout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:elevation="3dp"
+            android:fadingEdgeLength="3dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CARD NUMBER"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="**** **** **** 4577"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="EXPIRY DATE"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12/16"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CARD HOLDER NAME"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_holder_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jordan Caddy"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_card_type"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/visa" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_closeicon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:elevation="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/minus" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

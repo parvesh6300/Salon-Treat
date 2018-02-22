@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#EDEDED">
+
+    <RelativeLayout
+        android:id="@+id/rel_review_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:padding="10dp"
+        android:background="#ffffff">
+
+
+        <TextView
+            android:id="@+id/tv_salon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            android:text="Salon NAme" />
+
+
+        <utils.CustomRatingBarBlue
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:id="@+id/rating"
+            android:numStars="5"
+            app:onlyForDisplay="true"
+            android:layout_below="@+id/tv_salon_name"/>
+
+
+        <TextView
+            android:id="@+id/tv_created"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#8E8E8E"
+            android:typeface="monospace"
+            android:text="2010 Oct 16"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/rating"/>
+
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/tv_salon_name"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/frontarrow"/>
+
+        <TextView
+            android:id="@+id/tv_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"
+            android:typeface="monospace"
+            android:textColor="#8E8E8E"
+            android:text="Hello guys this is the best salon...."
+            android:layout_below="@+id/tv_created"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graycolor"
+            android:layout_below="@+id/tv_review"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_review_detail"
+        android:padding="3dp"
+        android:elevation="3dp"
+        android:background="#ffffff">
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/trashicon"
+            android:layout_toLeftOf="@+id/tv_remove_label"/>
+
+        <TextView
+            android:id="@+id/tv_remove_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#e93232"
+            android:text="Remove Review"
+            android:typeface="monospace"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

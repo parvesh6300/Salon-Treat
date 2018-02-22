@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dcube.com.salonseek.SignupActivity"
+    android:background="@drawable/signup_bg">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/login_layout"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backarrow"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/backbutton"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signup"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username"
+            android:id="@+id/username"
+            android:typeface="monospace"
+            android:textColorHint="#FFFFFF"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/userhighest"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/password"
+                android:textColorHint="#FFFFFF"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:typeface="monospace"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@android:color/white"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/lockhighest"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/confirmpassword"
+                android:textColorHint="#FFFFFF"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"
+                android:typeface="monospace"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@android:color/white"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/lockhighest"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/firstname"
+                android:textColorHint="#FFFFFF"
+                android:hint="First Name"
+                android:typeface="monospace"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@android:color/white"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/userhighest"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lastname"
+                android:textColorHint="#FFFFFF"
+                android:hint="Last Name"
+                android:typeface="monospace"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@android:color/white"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/userhighest"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/email"
+                android:textColorHint="#FFFFFF"
+                android:hint="Email"
+                android:typeface="monospace"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@android:color/white"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mailicon"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:id="@+id/checkbox">
+
+            <CheckBox
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:checked="true"
+                android:id="@+id/check"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/transparent"
+                android:background="@drawable/checkbox_selector" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:typeface="monospace"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/check"
+                android:text = "   Send me newsletters and the latest offers"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:background="@drawable/finishbutton"
+            android:id="@+id/finishbutton"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

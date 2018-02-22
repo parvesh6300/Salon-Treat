@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dcube.com.salonseek.ShareUsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:elevation="3dp"
+        android:id="@+id/top"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Done"
+            android:id="@+id/done"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/colorblue"
+            android:layout_alignParentRight="true"
+            android:typeface="monospace"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:text="Thank you!"
+        android:layout_below="@id/top"
+        android:id="@+id/thanks"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="SALON TREAT LOVES YOU!"
+        android:layout_below="@id/thanks"
+        android:id="@+id/love"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/love"
+        android:layout_centerHorizontal="true"
+        android:text="@string/thankyoutext"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/social"
+        android:layout_alignParentBottom="true">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/email"
+            android:id="@+id/email"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/facebook"
+            android:id="@+id/facebook"
+            android:layout_below="@id/email"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/insta"
+            android:id="@+id/insta"
+            android:layout_below="@id/facebook"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/twitter"
+            android:layout_below="@id/insta"
+            android:id="@+id/twiter"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorblue"
+        android:layout_above="@id/social"
+        android:layout_marginBottom="30dp"
+        android:text="Rate us on the App Store"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

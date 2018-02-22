@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginLeft="20dp">
+
+
+    <utils.CustomRatingBarBlue
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rating"
+        android:numStars="5"
+        app:onlyForDisplay="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#8E8E8E"
+        android:id="@+id/clientinfo"
+        android:typeface="monospace"
+        android:text="cut"
+        android:layout_below="@id/rating" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/comments"
+        android:typeface="monospace"
+        android:text="Regular Cut"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/clientinfo" />
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/grayline"/>
+
+</RelativeLayout>
+

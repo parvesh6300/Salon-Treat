@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/backview"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#8E8E8E"
+        android:id="@+id/offer"
+        android:typeface="monospace"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="0 % off"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/stylist"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/name"
+        android:typeface="monospace"
+        android:text="Regular Cut"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/stylist"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#8E8E8E"
+        android:id="@+id/type"
+        android:text="cut"
+        android:typeface="monospace"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/stylist"/>
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/selectedlist"
+        android:layout_toRightOf="@id/name"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/selected"/>
+
+</RelativeLayout>
+

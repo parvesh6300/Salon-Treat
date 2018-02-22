@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:elevation="3dp"
+        android:id="@+id/addpayment"
+        android:layout_marginTop="10dp"
+        android:background="@color/graycolor">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/graytext"
+            android:id="@+id/name"
+            android:typeface="monospace"
+            android:text="Add New Payment Method"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</LinearLayout>

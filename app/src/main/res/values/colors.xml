@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colortextblack">#484848</color>
+    <color name="colorblue">#438bc5</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="graytext">#B6B6B6</color>
+
+    <color name="graycolor">#E1E1E1</color>
+    <color name="grayline">#EDEDED</color>
+    <color name="black">#000000</color>
+    <color name="gray">#F2F2F2</color>
+
+    <color name="greyed_out">#959595</color>
+
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
+    <color name="product_bg">#EFF0F6</color>
+
+    <color name="green">#26bd97</color>
+
+    <color name="product_btn_bg">#25ae88</color>
+    <color name="product_detail_bg">#6d759c</color>
+    <color name="product_slctd_bg">#667ef7</color>
+
+    <color name="dark_gray">#262c32</color>
+
+
+</resources>

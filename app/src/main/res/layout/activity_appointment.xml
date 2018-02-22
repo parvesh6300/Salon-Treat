@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/mapcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:elevation="1dp">
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/mapcontainer"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cancel"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentEnd="true"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/salonimage"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/salonpic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/salonname"
+            android:text="salon name"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/salonimage"
+            android:textColor="#373737"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:typeface="monospace" />
+
+        <utils.CustomRatingBar
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:id="@+id/ratingbar"
+            android:gravity="center"
+            app:onlyForDisplay="true"
+            app:stars="5"
+            android:layout_toRightOf="@id/salonimage"
+            android:layout_below="@id/salonname"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mornington"
+            android:id="@+id/location"
+            android:textColor="@color/graytext"
+            android:layout_toRightOf="@id/salonimage"
+            android:typeface="monospace"
+            android:layout_below="@id/ratingbar" />
+
+        </RelativeLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E3E3E3"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/pouplar"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/clockblack"
+                android:layout_centerVertical="true"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time"
+                android:text="Timing"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/pouplar"
+                android:textColor="#373737"
+                android:layout_marginLeft="10dp"
+                android:typeface="monospace"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E3E3E3"/>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/pop"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/dryerblack"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/type"
+                android:text="Treatment"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/pop"
+                android:textColor="#373737"
+                android:layout_marginLeft="10dp"
+                android:typeface="monospace"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E3E3E3"/>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/hair"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/stylistblack"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stylist"
+                android:text="Stylist"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/hair"
+                android:textColor="#373737"
+                android:layout_marginLeft="10dp"
+                android:typeface="monospace"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E3E3E3"/>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Treatment Total"
+                android:textSize="16sp"
+                android:id="@+id/total"
+                android:textColor="#373737"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:typeface="monospace" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Inc GST)"
+                android:textSize="16sp"
+                android:layout_below="@id/total"
+                android:textColor="#717171"
+                android:gravity="center"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$35.00"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:textColor="#373737"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:typeface="monospace"
+                android:id="@+id/price" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.blog.navdrawer.MainActivity"
+        android:background="#FFFFFF"
+        android:id="@+id/mainlayout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="17dp"
+            android:src="@drawable/toplogo"
+            android:layout_gravity="center"
+            android:id="@+id/toplogo"
+            android:background="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/list"
+                android:background="@android:color/white"
+                android:layout_below="@id/toplogo"
+                android:divider="@null"
+                android:dividerHeight="0dp">
+            </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:weightSum="3"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:id="@+id/bottom">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/searchiconselected"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/newbookicon"
+                android:layout_weight="1"
+                android:id="@+id/appointment"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/profile"
+                android:src="@drawable/profile"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#B6B6B6"
+            android:layout_above="@id/bottom"/>
+
+        <SlidingDrawer
+            android:id="@+id/searchDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:content="@+id/content1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:handle="@+id/handle"
+            android:alpha="0.98"
+            android:rotation="180">
+
+        <View
+            android:id="@id/handle"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:background="@android:color/white"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F6F6F6"
+            android:id="@+id/content1"
+            android:rotation="180">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2F2F2F"
+                android:text="Search"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/searchtxt"
+                android:textSize="20sp"/>
+
+            <View
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:background="#CACACA"
+                android:layout_below="@id/searchtxt"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/searchtxt"
+                android:layout_marginTop="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/searchblack"
+                        android:id="@+id/searchicon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/searchicon"
+                        android:text="Salon Name"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/colortextblack"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colortextblack"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="Salon near"
+                        android:id="@+id/neartext"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorblue"
+                        android:text=" Mornington"
+                        android:layout_toRightOf="@id/neartext"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/frontarrow"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colortextblack"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="Date &amp; time" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/frontarrow"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colortextblack"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="Treatment" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/frontarrow"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colortextblack"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="Salon Type" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/frontarrow"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Show Salons"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#448AC4"
+                android:id="@+id/showsalon"/>
+
+        </RelativeLayout>
+
+    </SlidingDrawer>
+
+        <SlidingDrawer
+        android:id="@+id/filterdrawer"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:content="@+id/content"
+        android:gravity="center_horizontal"
+        android:handle="@+id/handle"
+        android:orientation="vertical"
+        android:rotation="180"
+        android:alpha="0.99">
+
+        <View
+            android:id="@id/handle"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@drawable/transparent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F6F6F6"
+            android:id="@+id/content"
+            android:rotation="180">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2F2F2F"
+                android:text="Filters"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/filtertext"
+                android:textSize="20sp"/>
+
+            <View
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:background="#CACACA"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/filtertext"/>
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/filtertext"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort By"
+                    android:textColor="#3E3E3E"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/white"
+                        android:weightSum="2"
+                        android:layout_marginBottom="3dp"
+                        android:elevation="2dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/allselected"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:background="#CACACA"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/popular_unselected"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+
+                  </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:textColor="#3E3E3E"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:weightSum="2"
+                    android:layout_marginBottom="3dp"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="High to Low"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:background="#CACACA"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Low to High"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:textColor="#3E3E3E"
+                    android:layout_marginBottom="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="3dp"
+                    android:elevation="2dp">
+
+                <utils.CustomRatingBar
+                    android:layout_width="210dp"
+                    android:layout_height="30dp"
+                    app:halfStars="true"
+                    app:stars="5"
+                    android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance"
+                    android:textColor="#3E3E3E"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/slide"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"/>
+                    
+                  <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:max="60"
+                    android:layout_gravity="center"
+                    android:maxHeight="4dp"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/slider"
+                    android:thumb="@drawable/thumb_image" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/seekvalue"
+                        android:textColor="#438BA7"
+                        android:textSize="14sp"
+                        android:text="60km" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="8dp"
+                android:src="@drawable/bottomslideicon"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/bottomslide"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </SlidingDrawer>
+
+</RelativeLayout>

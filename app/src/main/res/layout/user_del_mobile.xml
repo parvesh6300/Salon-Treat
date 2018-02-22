@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/minus"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_mob_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:typeface="monospace"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorblue"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grayline"/>
+
+        <TextView
+            android:id="@+id/tv_contact_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0488 226 233"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

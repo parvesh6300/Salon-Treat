@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">Salon Treat</string>
+    <string name="facebook_app_id">1898563413692152</string>
+
+    <!-- Salon Advisor App id -->
+
+    <string name="discover">discover</string>
+    <string name="instant">instant</string>
+    <string name="time">time</string>
+    <string name="group">group</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_appointment">AppointmentActivity</string>
+    <string name="thankyoutext">Please email us with feedback we would love to hear from you so we can improve your experience!</string>
+    <string name="paymenttext">Please select payment method, Zanjani Salon requires
+                               a prepayment of 30% to secure the booking. Booking cost
+                               will be taken from the subtotal of the hair treatment.
+    </string>
+
+    <string-array name="country">
+        <item>Australia(+61)</item>
+        <item>Canada(+1)</item>
+        <item>USA(+1)</item>
+        <item>India(+91)</item>
+    </string-array>
+
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+
+
+</resources>

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context="dcube.com.salonseek.CartActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rel_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/backhdpi" />
+
+
+
+        <TextView
+            android:id="@+id/tv_activity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHOPPING BAG"
+            android:layout_toEndOf="@+id/iv_back"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corner_black"
+            >
+
+            <TextView
+                android:id="@+id/tv_wishlist_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WISHLIST"
+                android:textColor="@color/com_facebook_blue"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:typeface="monospace"
+                />
+
+
+            <ImageView
+                android:id="@+id/iv_wishlist"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/wishlist_hdpi"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/tv_wishlist_label"
+                />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel_header"
+        android:layout_above="@+id/lin_footer"
+        android:layout_marginBottom="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rel_item_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_items_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITEMS(1)"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:typeface="monospace"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_total_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL:$14.00"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:typeface="monospace"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cart_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                android:layout_marginTop="10dp"
+                android:fadeScrollbars="false"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tv_option_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OPTIONS"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:typeface="monospace"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner_black"
+                >
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rel_cpn_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:id="@+id/iv_offer"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:src="@mipmap/offer_hdpi" />
+
+
+                        <TextView
+                            android:id="@+id/tv_apply_coupon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apply Coupon"
+                            android:layout_marginStart="10dp"
+                            android:textSize="14sp"
+                            android:layout_toEndOf="@+id/iv_offer"
+                            android:layout_centerVertical="true"
+                            android:typeface="monospace"
+                            />
+
+
+                        <ImageView
+                            android:id="@+id/iv_offer_arow"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@mipmap/arrow_hdpi" />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_apply_cpn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        >
+
+                        <EditText
+                            android:id="@+id/ed_copn"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_apply_code"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:text="APPLY"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@color/white"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/rounded_corner_green_bg"
+                            />
+
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:background="@color/graycolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/iv_gift"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@mipmap/gift_hdpi" />
+
+
+
+                    <TextView
+                        android:id="@+id/tv_gift_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gift wrap for $0.75"
+                        android:layout_marginStart="10dp"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@+id/iv_gift"
+                        android:layout_centerVertical="true"
+                        android:typeface="monospace"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/iv_gift_arow"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@mipmap/arrow_hdpi" />
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_price_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRICE DETAILS"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:typeface="monospace"
+                />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner_black"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_bag_total_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bag Total"
+                    android:layout_marginStart="20dp"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_bag_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$14.00"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_cpn_disc_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coupon Discount"
+                    android:layout_marginStart="20dp"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_apply_copn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coupon Not Applied"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/com_facebook_blue"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_dvry_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:layout_marginStart="20dp"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_dvry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FREE"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/product_btn_bg"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_total_pybl_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Payable"
+                    android:layout_marginStart="20dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_total_pybl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$14.00"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:typeface="monospace"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lin_footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@drawable/shadow_bg"
+        android:gravity="center"
+        android:elevation="2dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_total_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="$14.00"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:typeface="monospace"
+                />
+
+            <TextView
+                android:id="@+id/tv_view_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="View Details"
+                android:textColor="@color/com_facebook_blue"
+                android:textSize="14sp"
+                android:layout_below="@+id/tv_total_footer"
+                android:typeface="monospace"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_place_order"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="PLACE ORDER"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_corner_green_bg"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:typeface="monospace"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

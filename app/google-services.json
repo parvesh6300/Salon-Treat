@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "286032938638",
+    "firebase_url": "https://salon-seek.firebaseio.com",
+    "project_id": "salon-seek",
+    "storage_bucket": "salon-seek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286032938638:android:226113c3edc8abcb",
+        "android_client_info": {
+          "package_name": "dcube.com.salonseek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286032938638-t7dtk21bv6l0ufjtq6l488kdjhk8i846.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9LwBN1yTkgnMUt6TYfk7JydheUhtqCrs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

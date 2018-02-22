@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rel_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="Reset"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="Apply"
+                android:textColor="@color/colorblue"
+                android:textSize="20sp"
+                android:typeface="monospace" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:background="#CACACA" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_filter_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_header"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lin_rating"
+                    android:layout_width="135dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_rating"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/stars" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Rating"
+                        android:textSize="15sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#CACACA" />
+
+                <LinearLayout
+                    android:id="@+id/lin_popular"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_popular"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/popularblack" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Popular"
+                        android:textSize="15sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#CACACA" />
+
+                <LinearLayout
+                    android:id="@+id/lin_available"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_available"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/available" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Available Now"
+                        android:textSize="15sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CACACA" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lin_post_visits"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_visits"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/popular_unselected" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Post Visits"
+                        android:textSize="15sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#CACACA" />
+
+                <LinearLayout
+                    android:id="@+id/lin_price"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_price"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/moneybagblue" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Price"
+                        android:textSize="15sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#CACACA" />
+
+
+                <LinearLayout
+                    android:id="@+id/lin_distance"
+                    android:layout_width="135dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_distance"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/locationblue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Distance"
+                        android:textSize="15sp"
+                        android:typeface="monospace" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CACACA" />
+
+        </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_post_visit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:layout_below="@+id/lin_filter_options"
+                >
+
+                <TextView
+                    android:id="@+id/tv_not_visit_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You currently have not visited any salon "
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+
+                <ListView
+                    android:id="@+id/lv_post_visit"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/tv_not_visit_label"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_dis_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:layout_below="@+id/lin_filter_options">
+
+                <TextView
+                    android:id="@+id/tv_start_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1km - "
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_limit_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_start_km"
+                    android:text="60"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+
+                <TextView
+                    android:id="@+id/tv_label_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_limit_km"
+                    android:text="km+"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_distance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_start_km"
+                    android:text="Distance is show near so far"
+                    android:textSize="15sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_distance_label">
+
+                    <org.florescu.android.rangeseekbar.RangeSeekBar
+                        android:id="@+id/custom_seek_dis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        rsb:absoluteMaxValue="60"
+                        rsb:absoluteMinValue="1"
+                        rsb:textAboveThumbsColor="@color/white"
+                        rsb:thumbDisabled="@drawable/seek_handler_pressed"
+                        rsb:thumbNormal="@drawable/seek_handler_pressed"
+                        rsb:thumbPressed="@drawable/seek_handler_pressed"
+                        rsb:barHeight="5dp"
+                        rsb:activeColor="@color/colorblue"
+                        rsb:defaultColor="@color/graytext"/>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_price_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:layout_below="@+id/lin_filter_options">
+
+                <TextView
+                    android:id="@+id/tv_start_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$15 -"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_limit_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_start_price"
+                    android:text="$1000 +"
+                    android:textSize="20sp"
+                    android:typeface="monospace" />
+
+
+                <TextView
+                    android:id="@+id/tv_price_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_start_price"
+                    android:text="Average Treatment price is $55"
+                    android:textSize="15sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_seek_bar_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/tv_price_label">
+
+                    <org.florescu.android.rangeseekbar.RangeSeekBar
+                        android:id="@+id/custom_seek_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        rsb:absoluteMaxValue="1000"
+                        rsb:absoluteMinValue="1"
+                        rsb:textAboveThumbsColor="@android:color/black"
+                        rsb:thumbDisabled="@drawable/seek_handler_normal"
+                        rsb:thumbNormal="@drawable/seek_handler_normal"
+                        rsb:thumbPressed="@drawable/seek_handler_pressed"
+                        rsb:thumbShadow="true"
+                        rsb:thumbShadowBlur="3dp"
+                        rsb:thumbShadowColor="@color/primary_material_light"
+                        rsb:thumbShadowXOffset="1dp"
+                        rsb:thumbShadowYOffset="2dp"  />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

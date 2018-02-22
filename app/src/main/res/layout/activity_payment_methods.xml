@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dcube.com.salonseek.PaymentMethods">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="Close"
+            android:textColor="@color/colorblue"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/backblue" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:text="What is this?"
+        android:textColor="@color/colorblue"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/graycolor"
+        android:layout_below="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/graycolor"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Pre-booking"
+                android:textColor="@color/graytext"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$10.50"
+                android:textColor="@color/colorblue"
+                android:textSize="28sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Payment method"
+                android:textColor="@color/graytext"
+                android:typeface="monospace" />
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="90dp"
+                android:divider="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_discount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="#67B454"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/tv_code_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Discount Code"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:typeface="monospace" />
+
+            <ImageView
+                android:id="@+id/iv_percentage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/percentage"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/tv_code_label"/>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

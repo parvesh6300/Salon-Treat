@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dcube.com.salonseek.InvoiceActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="Close"
+            android:textColor="@color/colorblue"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/backblue" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:text="What is this?"
+        android:textColor="@color/colorblue"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:background="@color/graycolor"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Pre-booking"
+            android:textColor="@color/graytext"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/tv_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10.50"
+            android:textColor="@color/colorblue"
+            android:textSize="28sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalise Treatment"
+            android:textColor="@color/graytext"
+            android:typeface="monospace" />
+
+
+        <!--<ListView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="450dp"-->
+            <!--android:id="@+id/list"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:divider="@android:color/transparent"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:elevation="3dp"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_card_type"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/paypal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_card_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_card_type"
+                    android:text="Card Name"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                   />
+
+                <TextView
+                    android:id="@+id/tv_card_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_card_type"
+                    android:text="034023002038"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/tv_card_type"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginLeft="60dp"
+                    android:layout_below="@id/tv_card_detail"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_treatment"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/dryerblack"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_trt_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_treatment"
+                    android:text="Treatment"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_treatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_treatment"
+                    android:text="Regular Cut"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/tv_trt_label"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginLeft="60dp"
+                    android:layout_below="@id/tv_treatment"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_stylist"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/stylistblack"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_stylist_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_stylist"
+                    android:text="Stylist"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_stylist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_stylist"
+                    android:text="Any"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/tv_stylist_label"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginLeft="60dp"
+                    android:layout_below="@id/tv_stylist"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/clockblack"/>
+
+                <TextView
+                    android:id="@+id/tv_time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_time"
+                    android:text="Time &amp; Date"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_time"
+                    android:text="11:00 PM, 3/9/15"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    android:layout_below="@+id/tv_time_label"
+                    android:layout_marginTop="10dp"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_book_aptmt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#478CC3"
+        android:alpha="0.90"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:text="Book Appointment"
+        android:gravity="center"
+        android:clickable="true"/>
+
+</RelativeLayout>

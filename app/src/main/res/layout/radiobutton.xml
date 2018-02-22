@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="140dp"
+    android:layout_height="50dp"
+    android:id="@+id/backview"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/bluecircle"
+        android:paddingLeft="10dp"
+        android:id="@+id/circle"
+        android:button="@drawable/transparent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/radioButton"
+        android:textColor="@color/colorblue"
+        android:text="2:00 pm"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/circle"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dcube.com.salonseek.BookStep1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:elevation="3dp"
+        android:textSize="18sp"
+        android:text="Step 2 of 3"
+        android:typeface="monospace"
+        android:gravity="center"
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorblue"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorblue"
+        android:alpha="0.90"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:text="Next"
+        android:typeface="monospace"
+        android:id="@+id/confirm"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/top"
+        android:layout_above="@+id/confirm"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="16sp"
+            android:text="Select Stylist"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:background="#F2F2F2"
+            android:gravity="center"/>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/liststylist"
+            android:background="@android:color/white"
+            android:choiceMode="singleChoice"/>
+
+    </LinearLayout>
+
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/top"-->
+        <!--android:layout_above="@+id/confirm"-->
+        <!--android:fillViewport="false">-->
+
+        <!---->
+    <!--</ScrollView>-->
+
+</RelativeLayout>

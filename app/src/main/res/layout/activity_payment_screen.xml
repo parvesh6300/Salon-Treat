@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dcube.com.salonseek.PaymentScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:elevation="3dp"
+        android:id="@+id/top"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Close"
+            android:textColor="@color/colorblue"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:typeface="monospace"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/backblue"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:id="@+id/cancel" />
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/botom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorblue"
+        android:text="Book Appointment"
+        android:typeface="monospace"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/white" />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="What is this?"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:elevation="1dp"-->
+        <!--android:typeface="monospace"-->
+        <!--android:textColor="@color/colorblue"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginRight="20dp"/>-->
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/graycolor"
+        android:layout_below="@id/top"
+        android:layout_above="@+id/botom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pre-booking"
+            android:typeface="monospace"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/graytext"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10.50"
+            android:typeface="monospace"
+            android:textColor="@color/colorblue"
+            android:textSize="28sp"
+            android:id="@+id/cost" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalise treatment"
+            android:textColor="@color/graytext"
+            android:typeface="monospace" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:divider="@android:color/transparent">
+        </ListView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graycolor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter New Payment Details"
+        android:background="@color/graycolor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="1dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true">
+
+
+        <RelativeLayout
+            android:layout_width="290dp"
+            android:layout_height="100dp"
+            android:elevation="2dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+    
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/visa"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/visa"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visa"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/visa"/>
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_card_holder_name"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:hint="Enter Card Holder Name"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:textColorHint="@color/graytext"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+
+        <EditText
+            android:id="@+id/ed_card_no"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:hint="Enter Card Number"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:textColorHint="@color/graytext"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/ed_card_expiry"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:hint="MM / YY"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:textColorHint="@color/graytext"
+            android:gravity="center"
+            android:maxLength="5"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/ed_cvc"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:hint="Cvv"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:textColorHint="@color/graytext"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add payment Method"
+        android:background="@color/colorblue"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:typeface="monospace"/>
+
+</RelativeLayout>

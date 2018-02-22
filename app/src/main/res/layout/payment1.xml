@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/graycolor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is this?"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:elevation="1dp"
+        android:textColor="@color/colorblue"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/graycolor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pre-booking"
+        android:typeface="monospace"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/graytext"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10.50"
+        android:typeface="monospace"
+        android:textColor="@color/colorblue"
+        android:textSize="28sp"
+        android:id="@+id/cost" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Payment method"
+        android:textColor="@color/graytext"
+        android:typeface="monospace" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:layout_marginTop="20dp"
+        android:divider="@android:color/transparent">
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:elevation="3dp"
+        android:id="@+id/addpayment"
+        android:layout_marginTop="10dp"
+        android:background="@color/graycolor">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/graytext"
+            android:id="@+id/name"
+            android:typeface="monospace"
+            android:text="Add New Payment Method"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

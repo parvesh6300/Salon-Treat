@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Confirm"
+        android:gravity="center"
+        android:elevation="2dp"
+        android:textColor="@color/colorblue"
+        android:textSize="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graycolor"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:typeface="monospace"
+        android:textColor="@color/colortextblack"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_title"
+        android:text="Are you sure! you want to cancel the appointment."/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graycolor"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_message"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/divider">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="20sp"
+            android:typeface="monospace"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorblue"
+            />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="20sp"
+            android:typeface="monospace"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/colorblue"
+            />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

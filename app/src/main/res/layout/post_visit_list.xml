@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_salon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        android:text="Salon Name"
+        android:textColor="@color/black"
+        android:layout_alignParentLeft="true"/>
+
+
+    <TextView
+        android:id="@+id/tv_salon_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        android:text="5.3km"
+        android:textColor="@color/colorblue"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/iv_marker"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_toLeftOf="@+id/tv_salon_distance"
+        android:src="@drawable/marker"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"/>
+
+
+</RelativeLayout>

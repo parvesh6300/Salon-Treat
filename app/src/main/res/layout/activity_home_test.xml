@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentholder">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:weightSum="3"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:clickable="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/searchiconselected"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:id="@+id/search"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/newbookicon"
+                android:layout_weight="1"
+                android:id="@+id/appointment"
+                android:layout_gravity="center"
+                android:clickable="true"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/profile"
+                android:src="@drawable/profile"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/bottom"
+            android:background="@color/graytext"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_right_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="true"
+        android:dividerHeight="1dp"
+        app:menu="@menu/activity_right_drawer"
+        app:itemTextColor="#535353"
+        android:background="@color/white"
+        app:itemTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/logout">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logout"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/log"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/log"
+                android:textSize="12sp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#535353"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

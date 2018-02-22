@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="dcube.com.salonseek.SalonActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/iv_get_dir"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/like"
+            android:src="@drawable/mapmarker" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/salonbg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/salonimage"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" />
+
+                <TextView
+                    android:id="@+id/salonname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/salonimage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:typeface="monospace" />
+
+                <utils.CustomRatingBarWhite
+                    android:id="@+id/ratingbarwhite"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/salonname"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:numStars="5"
+                    app:stars="5" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingbarwhite"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:typeface="monospace" />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/ratingbarwhite"
+                    android:layout_toLeftOf="@id/location"
+                    android:foregroundGravity="top"
+                    android:src="@drawable/location" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/treatment"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/bookicon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/bookicon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/bookicon"
+                    android:gravity="center"
+                    android:text="Treatment Prices"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/frontarrow" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_special_deals"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F2F2F2"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="     Deals &amp; Specials"
+                android:textColor="#5c5c5c"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F2F2F2"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="     Ratings &amp; Reviews"
+                android:textColor="#5c5c5c"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <TextView
+                    android:id="@+id/rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="0.0"
+                    android:textColor="@android:color/black"
+                    android:textSize="28sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/overalltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="Overall"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:typeface="monospace" />
+
+                <utils.CustomRatingBarBlue
+                    android:id="@+id/ratingbarblue"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/overalltext"
+                    android:layout_centerInParent="true"
+                    android:numStars="5"
+                    app:stars="5" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/ratingbarblue"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ratingtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/linearChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_above="@+id/ratingtext"
+                        android:layout_centerInParent="true"
+                        android:gravity="fill_horizontal"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/review"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/report"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/reviewicon" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/report"
+                    android:gravity="center"
+                    android:text="View Ratings &amp; Reviews"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/frontarrow" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F2F2F2"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="     Photos &amp; About"
+                android:textColor="#5c5c5c"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!--<Gallery-->
+            <!--android:id="@+id/Gallery01"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <utils.HorizontalListView
+                android:id="@+id/lv_salon_images"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_gravity="center" />
+
+            <RelativeLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/info"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/info" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/info"
+                    android:gravity="center"
+                    android:text="About Salon"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/frontarrow" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F2F2F2"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="     Details"
+                android:textColor="#5c5c5c"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="     Phone"
+                android:textColor="#5c5c5c"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:text="     5975 6708"
+                android:textColor="#438BA7"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:text="     Trading Hours"
+                android:textColor="#5c5c5c"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <TextView
+                    android:id="@+id/mon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/wed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/thu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/fri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/sat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:typeface="monospace" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:text="     Payment We Accept"
+                android:textColor="#7A7A7A"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_paypal"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/paypalsalonone"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_visa"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_paypal"
+                    android:src="@drawable/visasalon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_master"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_visa"
+                    android:src="@drawable/mastercardsalon"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/iv_american"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_master"
+                    android:src="@drawable/amexsalon"
+                    android:visibility="gone" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_apple_pay"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:src="@drawable/applepaysalon"-->
+                <!--android:layout_marginStart="10dp"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_below="@+id/iv_american"/>-->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:alpha="0.90"
+        android:background="#478CC3"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/booknow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Book Now"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_products"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Products"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
